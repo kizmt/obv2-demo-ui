@@ -1,0 +1,151 @@
+.marketCreated {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 8px;
+  background-color: var(--green100);
+  border: 1px solid var(--green700);
+  border-radius: 12px;
+  font-size: 14px;
+  .topSection {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-family: Font-Bold;
+  }
+  .description {
+    color: #ffffffb6;
+    
+  }
+  .label {
+    color: #ffffffb6;
+    font-size: 12px;
+  }
+  a {
+    color:var(--link);
+  }
+  .link {
+    background-color: #ffffff48;
+    color: white;
+    padding: 12px;
+    border-radius: 64px;
+    max-width: fit-content;
+    font-size: 14px;
+    font-family: Font-Bold;
+  }
+}
+
+.createMarketOuter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+  .clob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .input {
+      align-items: center;
+      .selector {
+        border: 2px solid var(--gray100)
+      }
+    }
+    
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    label {
+      color: var(--primary);
+      font-size: 14px;
+      &.secondary {
+        color: var(--secondary);
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+.createMarketWrapper {
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  // grid-template-columns: 1fr 2fr;
+  .imageContainer {
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .createMarketForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    .topSection {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      .title {
+        font-size: 18px;
+        color: var(--primary);
+        font-family: Font-Bold;
+      }
+      .closeBtn {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--gray100);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+    
+    .createMarketInputs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      
+      input {
+        background-color: var(--gray100);
+        border: 1px solid var(--gray200);
+        
+        border-radius: 8px;
+        padding: 12px;
+        color: var(--primary);
+        font-size: 14px;
+        &::placeholder {
+          color: var(--secondary);
+          opacity: .5;
+        }
+      }
+    }
+    .fee {
+      p {
+        font-size: 14px;
+      }
+    }
+    .createButton {
+      width: 100%;
+      height: 48px;
+      background-color: black;
+      flex-shrink: 0;
+      color: var(--primary);
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

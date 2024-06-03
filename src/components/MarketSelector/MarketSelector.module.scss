@@ -1,0 +1,185 @@
+
+.marketSelectorPopup {
+  width: 400px!important;
+  height: auto!important;
+  border-radius: 16px!important;
+  background-color: var(--gray100)!important;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 16px!important;
+  color: var(--primary)!important;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  .tokenSearchPopupContent {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+
+    .topContent {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .marketShortcuts {
+      display: grid;
+      align-items: center;
+      grid-auto-flow: column;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      .createMarketBtn {
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        background-color: var(--gray0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        gap: 4px;
+        color: var(--secondary);
+        .icon {
+          color: var(--secondary);
+        }
+        &:hover {
+          color: white;
+          background-color: black;
+          .icon {
+            color: var(--prism)!important;
+          }
+        }
+      }
+    }
+    .list {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      height: 360px;
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        height: 64px;
+        border-radius: 8px;
+        flex-shrink: 0;
+        cursor: pointer;
+        &:hover {
+          background-color: var(--gray200);
+        };
+        .itemLeft {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          .icons {
+            display: flex;
+            align-items: center;
+            ;
+          }
+          .texts {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+          }
+          .name {
+
+          }
+          .address {
+            font-size: 10px;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            background-color: var(--gray0);
+            border-radius: 4px;
+            max-width: fit-content;
+            padding: 4px;
+          }
+        }
+        .itemRight {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          .change {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            .percent {
+              color: var(--green700);
+              font-size: 14px;
+            }
+          }
+          .balance {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--primary);
+            font-family: Font-Bold;
+          }
+          .balanceUSD {
+            font-size: 14px;
+            color: var(--secondary);
+          }
+        }
+      };
+    }
+    .searchBar {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding:16px;
+      border-radius: 8px;
+      background-color: var(--gray0);
+
+      input {
+        position: absolute;
+        width: calc(100% - 24px);
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        padding-left: 24px;
+        color: var(--primary);
+        font-family: 'Font-Regular';
+        font-size: 16px;
+        &::placeholder {
+          color: var(--secondary);
+        }
+      }
+    }
+  }
+  .tokenSearchPopupHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .createMarketBtn {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background-color: var(--gray0);
+      border-radius: 64px;
+      padding: 8px 12px 8px 8px;
+      cursor: pointer;
+      p {
+        font-size: 12px;
+      }
+      &:hover {
+        background-color: var(--gray200);
+      }
+    }
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--gray900);
+      font-family: Font-Bold;
+    }
+    .closeBtn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: var(--gray0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}
