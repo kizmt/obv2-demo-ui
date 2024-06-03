@@ -1,0 +1,42 @@
+.selector {
+  display: flex;
+  align-items: center;
+  padding:8px;
+  .item {
+    padding: 12px;
+    border-radius: 10px;
+    min-width: 60px;
+    width: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Font-Bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    &.active {
+      background: rgba(62, 220, 255, 0.20);
+      border: 1px solid var(--brand);
+      color: var(--primary);
+    }
+  }
+  &.round {
+    .item {
+      border-radius: 64px;
+      padding: 4px 16px;
+    }
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .selector {
+    padding:4px;
+    .item {
+      padding: 4px;
+      border-radius: 10px;
+      width: 50%;
+      cursor: pointer;
+      font-size: 12px;
+    }
+  }  
+}
