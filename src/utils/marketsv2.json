@@ -1,0 +1,528 @@
+[
+  {
+      "address": "CFSMrBssNG8Ud1edW59jNLnq2cwrQ9uY5cM3wXmqRJj3",
+      "baseToken": {
+          "address": "So11111111111111111111111111111111111111112",
+          "chainId": 101,
+          "decimals": 9,
+          "name": "Wrapped SOL",
+          "symbol": "SOL",
+          "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
+          "tags": [
+              "old-registry"
+          ],
+          "extensions": {
+              "coingeckoId": "wrapped-solana"
+          }
+      },
+      "quoteToken": {
+          "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "chainId": 101,
+          "decimals": 6,
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+          "tags": [
+              "old-registry",
+              "solana-fm"
+          ],
+          "extensions": {
+              "coingeckoId": "usd-coin"
+          }
+      },
+      "name": "SOL-USDC"
+  },
+  {
+    "address": "8wjNUxS1oQpu6YXnG85WBBJtUNH29p8cXdjP4nFqrJTo",
+    "baseToken": {
+      "address": "6DNSN2BJsaPFdFFc1zP37kkeNe4Usc1Sqkzr9C9vPWcU",
+      "chainId": 101,
+      "decimals": 8,
+      "name": "Threshold BTC",
+      "symbol": "tBTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/11224/standard/0x18084fba666a33d37592fa2633fd49a74dd93a88.png?1696511155",
+      "tags": [
+          "tBTC"
+      ],
+      "extensions": {
+          "coingeckoId": "tbtc"
+      }
+    },
+    "quoteToken": {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+      "tags": [
+        "old-registry",
+        "solana-fm"
+      ],
+      "extensions": {
+        "coingeckoId": "usd-coin"
+      }
+    },
+  "name": "tBTC-USDC"
+  },
+  {
+    "address": "44yiceSCYefxLtxEZhgAsA4g9RpW7xViERJqrrTxoC1P",
+    "baseToken": {
+        "address": "METADDFL6wWMWEoKTFJwcThTbUmtarRJZjRpzUvkxhr",
+        "chainId": 101,
+        "decimals": 9,
+        "name": "META",
+        "symbol": "META",
+        "logoURI": "https://6hgaiayuroxlfrn3djpb7mx4ocwielgo2ovpj4ka4v47jsxj2p2a.arweave.net/8cwEAxSLrrLFuxpeH7L8cKyCLM7TqvTxQOV59Mrp0_Q?ext=png",
+        "tags": [
+            "futarchy"
+        ],
+        "extensions": {
+        }
+    },
+    "quoteToken": {
+        "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "chainId": 101,
+        "decimals": 6,
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+        "tags": [
+            "old-registry",
+            "solana-fm"
+        ],
+        "extensions": {
+            "coingeckoId": "usd-coin"
+        }
+    },
+    "name": "META-USDC"
+    },
+  {
+    "address": "G6veo6MpQXc9vbM6p3wcRYyBee2na1uuD9y6CT1ZRgjw",
+    "baseToken": {
+        "address": "PRSMNsEPqhGVCH1TtWiJqPjJyh2cKrLostPZTNy1o5x",
+        "chainId": 101,
+        "decimals": 9,
+        "name": "Prism",
+        "symbol": "PRISM",
+        "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/PRSMNsEPqhGVCH1TtWiJqPjJyh2cKrLostPZTNy1o5x/logo.svg",
+        "tags": [
+            "prism"
+        ],
+        "extensions": {
+            "coingeckoId": "prism"
+        }
+    },
+    "quoteToken": {
+        "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "chainId": 101,
+        "decimals": 6,
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+        "tags": [
+            "old-registry",
+            "solana-fm"
+        ],
+        "extensions": {
+            "coingeckoId": "usd-coin"
+        }
+    },
+    "name": "PRISM-USDC"
+  },
+  {
+    "address": "4xXZYfgY65tnoV3omE7M6n4KGp8Jg8bvN4tKBU7zibFa",
+    "baseToken": {
+      "address": "StepAscQoEioFxxWGnh2sLBDFp9d8rvKz2Yp39iDpyT",
+      "chainId": 101,
+      "decimals": 9,
+      "name": "Step Finance",
+      "symbol": "STEP",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/StepAscQoEioFxxWGnh2sLBDFp9d8rvKz2Yp39iDpyT/logo.png",
+      "tags": [
+        "STEP"
+      ],
+      "extensions": {
+        "coingeckoId": "step-finance"
+      }
+    },
+    "quoteToken": {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+      "tags": [
+        "old-registry",
+        "solana-fm"
+      ],
+      "extensions": {
+        "coingeckoId": "usd-coin"
+      }
+    },
+  "name": "STEP-USDC"
+  },
+  {
+    "address": "4G9zdGpZgZVYPQTcVyseteF5uASKyz5wCJzshZHZcZsW",
+    "baseToken": {
+      "address": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "Dogwifhat",
+      "symbol": "$WIF",
+      "logoURI": "https://bafkreibk3covs5ltyqxa272uodhculbr6kea6betidfwy3ajsav2vjzyum.ipfs.nftstorage.link/",
+      "tags": [
+        "WIF"
+      ],
+      "extensions": {
+        "coingeckoId": "dogwifcoin"
+      }
+    },
+    "quoteToken": {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+      "tags": [
+        "old-registry",
+        "solana-fm"
+      ],
+      "extensions": {
+        "coingeckoId": "usd-coin"
+      }
+    },
+  "name": "WIF-USDC"
+  },
+  {
+    "address": "Gio5iGZF9YVvhX6vwW3fZEfnPhtafseapaseGbAoiH9D",
+    "baseToken": {
+      "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "chainId": 101,
+      "decimals": 5,
+      "name": "Bonk",
+      "symbol": "BONK",
+      "logoURI": "https://quei6zhlcfsxdfyes577gy7bkxmuz7qqakyt72xlbkyh7fysmoza.arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I",
+      "tags": [
+        "BONK"
+      ],
+      "extensions": {
+        "coingeckoId": "bonk"
+      }
+    },
+    "quoteToken": {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+      "tags": [
+        "old-registry",
+        "solana-fm"
+      ],
+      "extensions": {
+        "coingeckoId": "usd-coin"
+      }
+    },
+  "name": "BONK-USDC"
+  },
+  {
+    "address": "DBSZ24hqXS5o8djunrTzBsJUb1P8ZvBs1nng5rmZKsJt",
+    "baseToken": {
+      "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "chainId": 101,
+      "decimals": 5,
+      "name": "Bonk",
+      "symbol": "BONK",
+      "logoURI": "https://quei6zhlcfsxdfyes577gy7bkxmuz7qqakyt72xlbkyh7fysmoza.arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I",
+      "tags": [
+        "BONK"
+      ],
+      "extensions": {
+        "coingeckoId": "bonk"
+      }
+    },
+    "quoteToken": {
+      "address": "So11111111111111111111111111111111111111112",
+      "chainId": 101,
+      "decimals": 9,
+      "name": "Wrapped SOL",
+      "symbol": "SOL",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
+      "tags": [
+          "old-registry"
+      ],
+      "extensions": {
+          "coingeckoId": "wrapped-solana"
+      }
+  },
+  "name": "BONK-SOL"
+  },
+  {
+    "address": "BU3EaRVo9WN44muCBy3mwkCQ4uYQWiuqay1whEmeSXK3",
+    "baseToken": {
+      "address": "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
+      "chainId": 101,
+      "decimals": 8,
+      "name": "Render Token",
+      "symbol": "RENDER",
+      "logoURI": "https://shdw-drive.genesysgo.net/5zseP54TGrcz9C8HdjZwJJsZ6f3VbP11p1abwKWGykZH/rndr.png",
+      "tags": [
+          "render"
+      ],
+      "extensions": {
+          "coingeckoId": "render-token"
+      }
+    },
+    "quoteToken": {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+      "tags": [
+        "old-registry",
+        "solana-fm"
+      ],
+      "extensions": {
+        "coingeckoId": "usd-coin"
+      }
+    },
+  "name": "RENDER-USDC"
+  },
+  {
+    "address": "3XDUhcP9qKQFjyHhYeoGU8ssHmQ7zfKpVbg5GuaHJoLD",
+    "baseToken": {
+      "address": "nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7",
+      "chainId": 101,
+      "decimals": 8,
+      "name": "Nosana",
+      "symbol": "NOS",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7/logo.png",
+      "tags": [
+          "nosana"
+      ],
+      "extensions": {
+          "coingeckoId": "nosana"
+      }
+    },
+    "quoteToken": {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+      "tags": [
+        "old-registry",
+        "solana-fm"
+      ],
+      "extensions": {
+        "coingeckoId": "usd-coin"
+      }
+    },
+  "name": "NOS-USDC"
+  },
+  {
+    "address": "HeGr5aWeEmWipHh4QSqjbzTCExnqPa9NTZTso3cM16vm",
+    "baseToken": {
+      "address": "So11111111111111111111111111111111111111112",
+      "chainId": 101,
+      "decimals": 9,
+      "name": "Wrapped SOL",
+      "symbol": "SOL",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
+      "tags": [
+          "old-registry"
+      ],
+      "extensions": {
+          "coingeckoId": "wrapped-solana"
+      }
+    },
+    "quoteToken": {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+      "tags": [
+        "old-registry",
+        "solana-fm"
+      ],
+      "extensions": {
+        "coingeckoId": "usd-coin"
+      }
+    },
+  "name": "SOL-USDC"
+  },
+  {
+    "address": "3HdSiK4iEJxLxyuLTL4jywT4Dntf6gshFsTdAzqxjkc3",
+    "baseToken": {
+      "address": "DUALa4FC2yREwZ59PHeu1un4wis36vHRv5hWVBmzykCJ",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "Dual DAO Token",
+      "symbol": "DUAL",
+      "logoURI": "https://www.dual.finance/images/token-logos/dual.png",
+      "tags": [
+        "DUAL"
+      ],
+      "extensions": {
+        "coingeckoId": "dual-finance"
+      }
+    },
+    "quoteToken": {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+      "tags": [
+        "old-registry",
+        "solana-fm"
+      ],
+      "extensions": {
+        "coingeckoId": "usd-coin"
+      }
+    },
+  "name": "DUAL-USDC"
+  },
+  {
+    "address": "G9MkWAoAob4ArMe4LtH67uLFG9waeZZLz6diNNBCKC5N",
+    "baseToken": {
+      "address": "GFX1ZjR2P15tmrSwow6FjyDYcEkoFb4p4gJCpLBjaxHD",
+      "chainId": 101,
+      "decimals": 9,
+      "name": "GooseFx",
+      "symbol": "GOFX",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/GFX1ZjR2P15tmrSwow6FjyDYcEkoFb4p4gJCpLBjaxHD/logo.png",
+      "tags": [
+        "GOFX"
+      ],
+      "extensions": {
+        "coingeckoId": "goosefx"
+      }
+    },
+    "quoteToken": {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+      "tags": [
+        "old-registry",
+        "solana-fm"
+      ],
+      "extensions": {
+        "coingeckoId": "usd-coin"
+      }
+    },
+  "name": "GOFX-USDC"
+  },
+  {
+    "address": "Bt9mXCaP4ihynZ61sUBSB6BaVzMz9iMzXocugCUp6BCB",
+    "baseToken": {
+      "address": "5qKDWkBejLtRh1UGFV7e58QEkdn2fRyH5ehVXqUYujNW",
+      "chainId": 101,
+      "decimals": 9,
+      "name": "SCOIN",
+      "symbol": "SCOIN",
+      "logoURI": "https://homrguuyxkmns7qvmy3m5ljvgkrljksmcevs3txfzsnkfczse4bq.arweave.net/O5kTUpi6mNl-FWY2zq01MqK0qkwRKy3O5cyaoosyJwM",
+      "tags": [
+        "SCOIN"
+      ],
+      "extensions": {
+        "coingeckoId": "sdrive-app"
+      }
+    },
+    "quoteToken": {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+      "tags": [
+        "old-registry",
+        "solana-fm"
+      ],
+      "extensions": {
+        "coingeckoId": "usd-coin"
+      }
+    },
+  "name": "SCOIN-USDC"
+  },
+  {
+    "address": "Gudvr1FPgxKfnMoEEBXDgXWzmoavTY7nGC9TcdM4s3SP",
+    "baseToken": {
+      "address": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "Metaplex",
+      "symbol": "MPLX",
+      "logoURI": "https://kuji44lsf4frvko7srm7jdj6nqy2jzvdl5hy5dsodi7nva75rbtq.arweave.net/VRKOcXIvCxqp35RZ9I0-bDGk5qNfT46OTho-2oP9iGc",
+      "tags": [
+        "MPLX"
+      ],
+      "extensions": {
+        "coingeckoId": "metaplex"
+      }
+    },
+    "quoteToken": {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+      "tags": [
+        "old-registry",
+        "solana-fm"
+      ],
+      "extensions": {
+        "coingeckoId": "usd-coin"
+      }
+    },
+  "name": "MPLX-USDC"
+  },
+  {
+    "address": "E54qnMNxfSieWsusLYoHXELjjyF29nbUN21Zwdct7cYc",
+    "baseToken": {
+      "address": "BANXbTpN8U2cU41FjPxe2Ti37PiT5cCxLUKDQZuJeMMR",
+      "chainId": 101,
+      "decimals": 9,
+      "name": "Banx",
+      "symbol": "BANX",
+      "logoURI": "https://4ucgfnibr5ldh4fghn4n2b57lccknswodvnqftfjbkia2pjiwima.arweave.net/5QRitQGPVjPwpjt43Qe_WISmys4dWwLMqQqQDT0oshg",
+      "tags": [
+        "banx"
+      ],
+      "extensions": {
+        "coingeckoId": "banx"
+      }
+    },
+    "quoteToken": {
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "chainId": 101,
+      "decimals": 6,
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
+      "tags": [
+        "old-registry",
+        "solana-fm"
+      ],
+      "extensions": {
+        "coingeckoId": "usd-coin"
+      }
+    },
+  "name": "BANX-USDC"
+  }
+]
