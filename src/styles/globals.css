@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'TT Mono';
+  src: url('/fonts/TT_Commons_Pro_Mono_Medium.woff2') format('woff2');
+  font-display: swap;
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'TT Commons Expanded';
+  src: url('/fonts/TT_Commons_Pro_Expanded_DemiBold.woff2') format('woff2');
+  font-display: swap;
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: normal;
+  src: url('/fonts/TT_Commons_Pro_Normal.woff2') format('woff2');
+  font-display: swap;
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: medium;
+  src: url('/fonts/TT_Commons_Pro_Medium.woff2') format('woff2');
+  font-display: swap;
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: bold;
+  src: url('/fonts/TT_Commons_Pro_DemiBold.woff2') format('woff2');
+  font-display: swap;
+  letter-spacing: -0.04em;
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --warning: 36.99 100% 62.16% / 20%;
+    --warning-foreground: 34.03 93.7% 50.2%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 256 18% 12%;
+    --foreground: 253 19% 91%;
+    --background-over: 256 18% 17%;
+    --card: 256 18% 19%;
+    --card-foreground: 210 40% 98%;
+    --popover: 256 18% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 256 18% 12%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 269 38% 48%;
+    --secondary-foreground: 269 18% 81%;
+    --muted: 253 19% 91%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --warning: 33 100% 57% / 20%;
+    --warning-foreground: 34.03 93.7% 50.2%;
+    --border: 253 19% 41%;
+    --input: 256 18% 10%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    @apply !min-w-full;
+  }
+}

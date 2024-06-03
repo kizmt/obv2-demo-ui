@@ -1,0 +1,532 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+body {
+  transition: background-color 0.1s;
+  min-height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  border-radius: 12px;
+  padding: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2b3545;
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3c4d64; 
+}
+
+.showScrollbar {
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 12px;
+    padding: 4px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: var(--gray0);
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.504);
+    opacity: 0.5;
+    border-radius: 12px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #643c64; 
+  }
+}
+:root,
+[data-theme="dark"] {
+  --gray0: #121827;
+  --toast: #15181f;
+  --gray100: #121827;
+  --gray200: #3f5169;
+  --highlight: #dfe3fe;
+  // --secondary: #9094AD;
+  --brand: #3EDCFF;
+  --link: #507ef3;
+  --primaryGreen: #baffe6;
+  --primaryRed: #ffc8c8;
+  --green700: #32d57d;
+  --green300: #4adca736;
+  --green100: #174232;
+  --green50: rgba(23, 66, 50, 0.31);
+  --red700: #F35050;
+  --red300: #f350505e;
+  --red100: #371111;
+  --red50: #37111145;
+  --yellow700: #f79009;
+  --yellow200: #ffb53e;
+  --yellow100: #ffb53e33;
+  --dark: #1c212b;
+}
+
+[data-theme="light"] {
+  --gray0: #262838;
+  --gray100: #303347;
+  --green700: #3FB68B;
+  --link: #507ef3;
+  --green100: #174232;
+  --red700: #F35050;
+  --red100: #371111;
+}
+p {
+  margin: 0;
+}
+
+.popup_container {
+  backdrop-filter: blur(5px);
+}
+.popup_dialog {
+  background:none!important;;
+}
+
+.MuiDialog-scrollPaper {
+  align-items: flex-start;
+}
+.numFont {
+  font-family: Mono-Regular;
+  letter-spacing: -0.05em;
+  &.b {
+    font-family: Mono-Bold;
+    letter-spacing: -0.05em;
+  };
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+.Display-sm-m {
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: 2.25rem;
+  letter-spacing: -0.02em;
+}
+
+.Display-sm-n {
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 2.25rem;
+  letter-spacing: -0.02em;
+}
+
+.Display-md-n {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+  letter-spacing: -0.02em;
+}
+
+.Display-lg-sb {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3.75rem;
+  letter-spacing: -0.02em;
+}
+
+.Text-md-n {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.Text-md-m {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+.Text-lg-m {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+.Text-lg-sb {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+}
+.Text-lg-black {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.Text-sm-m {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.Text-sm-sb {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.Text-sm-n {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.Text-xs-m{
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.125rem;
+}
+.Text-xs-n{
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+.Display-sm-sb {
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 2.375rem;
+}
+.Display-xs-sb {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+.Display-md-sb {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  letter-spacing: -0.02em;
+}
+
+.borderCircle {
+  border-radius: 50%;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently*/
+}
+
+
+.justify-between {
+  justify-content: space-between;
+}
+.pointer {
+  cursor: pointer;
+}
+
+.MuiTooltip-tooltip {
+  font-size: 0.875rem!important;
+  background-color: var(--gray200)!important;
+}
+
+//snackbar
+// .MuiSnackbarContent-root {
+//   background-color: var(--gray0) !important;
+//   font-size: 1.4rem !important;
+//   color: var(--gray900) !important;
+//   border-radius: 1rem !important;
+//   border:1px solid var(--gray300);
+//   padding: 1.5rem!important;
+//   width: 22rem!important;
+// }
+
+// Override snackbar background shadow (make it lighter)
+.MuiPaper-elevation6 {
+  box-shadow: 0px 1px 18px 0px #0000001f !important;
+}
+
+
+.no-border {
+  border: none!important;
+
+}
+.no-shadow {
+  box-shadow: none!important;
+}
+
+.skeleton {
+  will-change: background, background-position;
+  background:
+    linear-gradient(0.25turn, transparent, var(--gray0), transparent), var(--gray200);
+  background-repeat: no-repeat;
+  background-position: -100em 0;
+  animation: loading 1.5s infinite;
+  border-radius: 0.5rem;
+}
+
+@keyframes loading {
+  to {
+    background-position: 100em 0;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.spinnerWrapper {
+  display: flex;
+  height: 14px;
+  width: 14px;
+  align-items: center;
+  color: red;
+  transition: 250ms ease color;
+  .pollingDot {
+    width: 12px;
+    height: 12px;
+    min-height: 12px;
+    min-width: 12px;
+    border-radius: 50%;
+    position: relative;
+    background-color: var(--gray0);
+    transition: 250ms ease background-color;
+
+    .spinner {
+      animation: rotate 1s cubic-bezier(0.83, 0, 0.17, 1) infinite;
+      transform: translateZ(0);
+      border-top: 1px solid transparent;
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      border-left: 2px solid var(--primary);
+      background: transparent;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      position: relative;
+      transition: 250ms ease border-color;
+      left: -3px;
+      top: -3px;
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+
+.shinyAnimation {
+  text-align: center;
+  background: linear-gradient(to right, #3EFFC5 25%, #3EED99 50%, #3EDCFF 90%, #3EFFC5 100%);
+  //background: linear-gradient(to right, #5A75FC 20%, #70f0d4 40%, #70f0d4 60%, #5A75FC 80%);
+  background-size: 200% auto;
+  
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: shine 2s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+
+
+.Toggle {
+  background-color: white;
+  color: var(--gray900);
+  height: 35px;
+  width: 35px;
+  border-radius: 4px;
+  display: flex;
+  font-size: 15px;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px var(--blackA7);
+}
+.Toggle:hover {
+  background-color: var(--gray300);
+}
+.Toggle[data-state='on'] {
+  background-color: var(--gray200);
+  color: var(--gray900);
+}
+.Toggle:focus {
+  box-shadow: 0 0 0 2px black;
+}
+
+.animatedText {
+  background: linear-gradient(90deg, #5a75fc 20%, #70f0d4 40%, #70f0d4 60%, #5a75fc 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 2s linear infinite;
+  animation: shine 2s linear infinite;
+}
+.toast {
+  display: flex;
+  flex-direction: column;
+  a {
+    color: var(--link);
+    font-size: 12px;
+  }
+}
+
+.gradientText {
+  background: -webkit-linear-gradient(45deg, #FD497D, #FFBF44);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*houdini*/
+@property --blink-opacity {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 1;
+}
+
+@keyframes blink-animation {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/*houdini*/
+/*custom*/
+
+@keyframes smoothBg {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
+
+
+.hero {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  --stripes: repeating-linear-gradient(
+    100deg,
+    #000 0%,
+    #000 7%,
+    transparent 10%,
+    transparent 12%,
+    #000 16%
+  );
+
+  --rainbow: repeating-linear-gradient(
+    100deg,
+    #60a5fa 10%,
+    #e879f9 15%,
+    #60a5fa 20%,
+    #5eead4 25%,
+    #60a5fa 30%
+  );
+  background-image: var(--stripes), var(--rainbow);
+  background-size: 300%, 200%;
+  background-position: 50% 50%, 50% 50%;
+  z-index: 1;
+  filter: blur(10px);
+  opacity: 0.7;
+  mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--stripes), var(--rainbow);
+    background-size: 200%, 100%;
+    animation: smoothBg 60s linear infinite;
+    background-attachment: fixed;
+    mix-blend-mode: difference;
+  }
+}
+
+.glow-box {
+  position: relative; 
+  width: 300px; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  background-color: #333; /* Dark background for better glow effect */
+  border-radius: 8px; /* Optional: for rounded corners */
+  overflow: hidden; /* Ensures the pseudo-element does not overflow outside the box */
+}
+
+.glow-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25%; /* Centers the bar (half the width of the div) */
+  width: 50%; /* Half the width of the .glow-box */
+  height: 100%; /* Extend to the full height to simulate the light effect */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.5); /* Adjust the blur and spread to your liking */
+  transform: perspective(100px) rotateX(75deg); /* Tilts the light effect */
+  transform-origin: top;
+}
