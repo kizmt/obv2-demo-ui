@@ -1,0 +1,136 @@
+.tradePage {
+  width: 100%;
+  padding: 0 8px;
+  min-width: 1024px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  .unofficialMarket {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 16px;
+    background-color: var(--yellow100);
+    border: 1px solid var(--yellow200);
+    color: white;
+
+    .side {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: var(--yellow100);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .texts {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        .title {
+          font-family: Font-Bold;
+          font-size: 14px;
+        }
+        .description {
+          font-size: 14px;
+        }
+      }
+    }
+    .link {
+      font-family: Font-Bold;
+      font-size: 12px;
+      border-radius: 8px;
+    }
+  }
+  .section {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 3fr 1fr;
+    gap: 8px;
+
+    .side {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+      flex-grow: 0;
+
+      .orderbookAndBox {
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 8px;
+        .orderbookOuterWrapper {
+          padding: 8px;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .tradePage {
+    width: 100%;
+    max-width: 100%;
+    min-width: 90%;
+    min-height: 100vh;
+    padding: 0 8px;
+    .unofficialMarket {
+      width: calc(100% - 16px);
+      background-color: var(--yellow200);
+      color: white;
+    }
+    .section {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .tradePage {
+    width: 100%;
+    max-width: 100%;
+    min-width: 90%;
+    min-height: 100vh;
+    padding: 0 8px;
+    .unofficialMarket {
+      width: calc(100% - 16px);
+      background-color: var(--yellow200);
+      color: white;
+    }
+    .section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .side {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        flex-grow: 0;
+  
+        .orderbookAndBox {
+          padding-top: 0;
+          gap: 16px;
+          .orderbookOuterWrapper {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
