@@ -1,0 +1,202 @@
+.watchlist {
+  overflow: hidden;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 16px 16px 0 0;
+  gap: 8px;
+  height: 69px;
+  .searchBar {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    &:hover {
+      svg {
+        fill: var(--primary);
+      }
+      p {
+        color: var(--primary);
+      }
+      background-color: var(--gray100);
+    }
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--secondary);
+    }
+  }
+
+  .marketInformation {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-left: 1px solid var(--gray100);
+    padding-left: 12px;
+    .tokenInfo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .nameSymbol {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        .name {
+          font-size: 12px;
+          color: var(--secondary);
+
+        }
+        .symbol {
+          font-size: 14px;
+          font-family: Font-Bold;
+        }
+      }
+    }
+    .priceInfo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      .change {
+        .label {
+          font-size:12px;
+          color: var(--secondary);
+        }
+        .value {
+          display: flex;
+          align-items: center;
+          gap: 2px;
+          p {
+            font-size: 14px;
+            font-family: Font-Bold;
+          }
+          &.green {
+            color: var(--green700);
+          }
+          &.red {
+            color: var(--red700);
+          }
+        }
+      }
+    }
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px;
+    flex-shrink: 0;
+    border-radius: 12px 0 0 0;
+    .icons {
+      display: flex;
+      align-items: center;
+      .icon {
+        border-radius: 50%;
+      }
+      .icon:last-child {
+        margin-left: -12px;
+      }
+    }
+
+    cursor: pointer;
+    &:hover {
+      background-color: hsl(var(--background-over))
+
+    }
+    .marketInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      .name {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--primary);
+      }
+      .secondaryButton {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        max-width: fit-content;
+        p {
+          font-size: 10px;
+        }
+        background-color: var(--gray100);
+        color:var(--secondary);
+        border-radius: 4px;
+        padding:4px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .watchlist {
+    border: none;
+    .marketInformation {
+      width: 100%;
+      justify-content: flex-end;
+      padding: 0;
+      padding-right: 8px;
+      .tokenInfo {
+        display: none;
+      }
+      .priceInfo {
+        .desktop {
+          display: none;
+        }
+        .change {
+          &:last-child {
+            align-items: flex-end;
+          }
+        }
+      }
+      border:none;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      .icons {
+        display: flex;
+        align-items: center;
+        .icon:last-child {
+          margin-left: -12px;
+        }
+      }
+  
+      cursor: pointer;
+      &:hover {
+        background-color: var(--gray200);
+  
+      }
+      .marketInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        .name {
+          font-size: 16px;
+          font-weight: 500;
+          color: var(--primary);
+        }
+        .secondaryButton {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          max-width: fit-content;
+          p {
+            font-size: 10px;
+          }
+          background-color: var(--gray100);
+          color:var(--secondary);
+          border-radius: 4px;
+          padding:4px;
+        }
+      }
+    }
+  }
+}
