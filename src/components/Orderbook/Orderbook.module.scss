@@ -1,0 +1,158 @@
+.orderbook {
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: hsl(var(--background));
+  border-radius: 8px;
+  .bookOverview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    p {
+      font-size: 14px;
+      color: var(--green700);
+    }
+  }
+  .orderbookTable {
+    display: flex;
+    align-items: flex-start;
+    .orderBookSide {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      
+      .bookTop {
+        display: grid;
+        align-items: center;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr;
+        padding: 0px 8px;
+        p {
+          font-size: 14px;
+          color: var(--secondary);
+          &:last-child {
+            text-align: right;
+          }
+        }
+      }
+
+      .bookBody {
+        display: flex;
+        flex-direction:column;
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        height: 248px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .row {
+          display: grid;
+          grid-auto-flow: column;
+          grid-template-columns: 1fr 1fr;
+          position: relative;
+          height: 24px;
+          flex-shrink: 0;
+          border:1px solid transparent;
+          &:hover {
+            background-color: hsl(var(--background-over));
+          }
+          p:last-child {
+            text-align: right;
+          
+          }
+          &.flashGreen {
+            animation: flashAnimationGreen 0.5s;
+          }
+          &.flashRed {
+            animation: flashAnimationRed 0.5s;
+          }
+          
+          @keyframes flashAnimationGreen {
+            from { background-color: var(--green300); }
+            to { background-color: transparent; }
+          }
+          @keyframes flashAnimationRed {
+            from { background-color: var(--red300); }
+            to { background-color: transparent; }
+          }
+          p {
+            font-family: Mono-Regular;
+            letter-spacing: -0.05em;
+            z-index: 1;
+          }
+          .price {
+            
+          }
+          .orderSizeBar {
+            position: absolute;
+            height: 22px;
+            top:1px;
+            box-sizing: border-box;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            &.reverse {
+              left: auto;
+              right: 2px;
+            }
+            &.total {
+              opacity: 0.1;
+            }
+            &.myOrder {
+              z-index: 100;
+              width: 2px;
+              left: 0;
+              height: 8px;
+              border-radius: 12px;
+              top: 7px;
+            }
+          }
+        }
+      }
+    }
+    .middlePart {
+      display: grid;
+      align-items: center;
+      grid-auto-flow: column;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 6px 0;
+      gap: 12px;
+      .price {
+        text-align: left;
+        color: var(--green700);
+        &:first-child {
+          text-align: right;
+          color: var(--red700);
+        }
+        font-family: Mono-Bold;
+      }
+      .spread {
+        font-size: 12px;
+        color: var(--secondary);
+        text-align: center;
+        font-family: Mono-Regular;
+      }
+    }
+    
+  }
+}
+
+@media screen and (max-width:768px) {
+  .orderbook {
+
+    .orderbookTable {
+      .orderBookSide {
+        .bookBody {
+          height: 266px;
+        }
+      }
+    }
+  }
+}
