@@ -8,7 +8,6 @@ import { Orderbox } from "@/components/Orderbox";
 import { Chart } from "@/components/Chart";
 import { UseMarket } from "@/utils/useMarket";
 import useWindowDimensions, { SOL_TOKEN, USDC_TOKEN } from "@/utils/utils";
-import { OpenOrdersBox } from "@/components/OpenOrdersBox";
 import { Orderbook } from "@/components/Orderbook";
 import { Selector } from "@/components/Selector";
 import { ArrowRightIcon, ChevronDownIcon, ChevronRightIcon, ExclamationTriangleIcon } from "@radix-ui/react-icons";
@@ -223,16 +222,6 @@ const TradePage = ({thumbnail}) => {
               className="flex"
               strategyPreview={strategyPreview}
             />
-            <OpenOrdersBox
-              currentMarket={currentMarket}
-              openOrders={openOrders}
-              updateMarket={updateMarket}
-              unsettledBalances={unsettledBalances}
-              loadUnsettledBalances={loadUnsettledBalances}
-              settleFunds={settleFunds}
-              cancelOrder={cancelOrder}
-              cancelAllOrders={cancelAllOrders}
-            />
           </div>
           <div className={styles.side}>
             <div className={`${styles.orderbookAndBox} border bg-card overflow-hidden`}>
@@ -277,60 +266,16 @@ const TradePage = ({thumbnail}) => {
                 <DropdownMenuContent className="w-96">
                   <DropdownMenuItem onClick={() => setStrategyOverride(0)} className="w-full cursor-pointer rounded flex items-center gap-2">
                     <div className="w-12 h-12 bg-background-over rounded-sm flex items-center justify-center">
-                      <CandlesIcon className={`h-6 w-6 ${strategyOverride === 0 ? 'text-cyan-500' : ''}`}/>
+                      <CandlesIcon className={`h-6 w-6 ${strategyOverride === 0 ? 'text-secondary' : ''}`}/>
                     </div>
                     <div className="flex flex-col">
-                      <p className={`text-lg font-bold ${strategyOverride === 0 ? 'text-cyan-500' : ''}`}>Limit Order</p>
+                      <p className={`text-lg font-bold ${strategyOverride === 0 ? 'text-secondary' : ''}`}>Limit Order</p>
                       <p className="text-xs text-muted-foreground">Place a limit buy/sell order in the orderbook</p>
-                    </div>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator/>
-                  <DropdownMenuItem onClick={() => setStrategyOverride(1)} className="w-full cursor-pointer rounded flex items-center gap-2">
-                    <div className="w-12 h-12 bg-background-over rounded-sm flex items-center justify-center">
-                      {/* <KingIcon className={`h-6 w-6 ${strategyOverride === 1 ? 'text-cyan-500' : ''}`}/> */}
-                      <StackIcon className={`h-6 w-6 ${strategyOverride === 1 ? 'text-cyan-500' : ''}`}/>
-                    </div>
-                    <div className="flex flex-col">
-                      <p className={`text-lg font-bold ${strategyOverride === 1 ? 'text-cyan-500' : ''}`}>Stack Order</p>
-                      <p className="text-xs text-muted-foreground">Place multiple orders instantly with a strategy</p>
-                    </div>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator/>
-                  <DropdownMenuItem onClick={(e) => e.preventDefault()} className="w-full cursor-pointer rounded flex items-center gap-2">
-                    <div className="w-12 h-12 bg-background-over rounded-sm flex items-center justify-center">
-                      <PacmanIcon className={`h-6 w-6`}/>
-                    </div>
-                    <div className="flex flex-col">
-                      <p className={`text-lg font-bold text-muted-foreground`}>Eat Da Spread</p>
-                      <p className="text-xs text-muted-foreground">Coming Soon</p>
-                    </div>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator/>
-                  <DropdownMenuItem onClick={(e) => e.preventDefault()} className="w-full cursor-pointer rounded flex items-center gap-2">
-                    <div className="w-12 h-12 bg-background-over rounded-sm flex items-center justify-center">
-                      <KingIcon className={`h-6 w-6`}/>
-                    </div>
-                    <div className="flex flex-col">
-                      <p className={`text-lg font-bold text-muted-foreground`}>King in the Castle</p>
-                      <p className="text-xs text-muted-foreground">Coming Soon</p>
-                    </div>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator/>
-                  <DropdownMenuItem onClick={(e) => e.preventDefault()} className="w-full cursor-pointer rounded flex items-center gap-2">
-                    <div className="w-12 h-12 bg-background-over rounded-sm flex items-center justify-center">
-                      <WickIcon className={`h-6 w-6`}/>
-                    </div>
-                    <div className="flex flex-col">
-                      <p className={`text-lg font-bold text-muted-foreground`}>Wick Hunter</p>
-                      <p className="text-xs text-muted-foreground">Coming Soon</p>
                     </div>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               <div className={styles.orderbookOuterWrapper}>
-                {/* <div className="orderbookTypeSelector">
-                  <Selector type={1} items={["Orderbook", "Depth"]} selected={orderbookType} onClick={(i) => setOrderbookType(i)}/>
-                </div> */}
                 {
                   orderbook && orderbook.bids.length > 0 && orderbook.asks.length > 0 ?
                   <Orderbook
@@ -410,16 +355,6 @@ const TradePage = ({thumbnail}) => {
             </div>
           </div>
           <div className={styles.side}>
-            <OpenOrdersBox
-              currentMarket={currentMarket}
-              openOrders={openOrders}
-              updateMarket={updateMarket}
-              unsettledBalances={unsettledBalances}
-              loadUnsettledBalances={loadUnsettledBalances}
-              settleFunds={settleFunds}
-              cancelOrder={cancelOrder}
-              cancelAllOrders={cancelAllOrders}
-            />
           </div>
         </div>
       }

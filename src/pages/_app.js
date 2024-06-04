@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from '@/redux/store';
 import { RPC_ENDPOINT, STRICT_TOKEN_LIST_API } from '@/redux/globalState';
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
-import { PhantomWalletAdapter, SolflareWalletAdapter, UnsafeBurnerWalletAdapter } from '@solana/wallet-adapter-wallets';
+import { PhantomWalletAdapter, SolflareWalletAdapter } from '@solana/wallet-adapter-wallets';
 import {
     WalletModalProvider
 } from '@solana/wallet-adapter-react-ui';
@@ -49,7 +49,6 @@ function Web3Wrapper({Component, pageProps}) {
            */
           new PhantomWalletAdapter(),
           new SolflareWalletAdapter(),
-          new UnsafeBurnerWalletAdapter(),
       ],
       // eslint-disable-next-line react-hooks/exhaustive-deps
       [network]
