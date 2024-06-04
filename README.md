@@ -1,20 +1,16 @@
-# Openbook V2 Demo UI Documentation
-
-## Introduction
-
-Welcome to the Openbook V2 Demo UI, a user interface for interacting with the Openbook V2 Central Limit Order Book (CLOB). This guide will help you get started with the demo, create markets, update logos and text settings, and adjust RPC connections from the Topbar.
+# OB V2 Example UI
 
 ## Getting Started
 
-To get started with the Openbook V2 Demo UI, follow these steps:
+To get started with the obv2 demo UI, follow these steps:
 
 ### Step 1: Clone the Repository
 
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-repo/openbook-v2-demo-ui.git
-cd openbook-v2-demo-ui
+git clone https://github.com/your-repo/obv2-demo-ui.git
+cd obv2-demo-ui
 ```
 
 ### Step 2: Install Dependencies
@@ -24,23 +20,19 @@ Install the required dependencies using your preferred package manager:
 ```bash
 npm install
 # or
-yarn install
-# or
-pnpm install
-# or
 bun install
 ```
 
-### Step 3: Configure RPC Endpoint and Helius API Key
+### Step 3: Configure RPC Endpoint
 
-Before running the development server, you need to configure your RPC endpoint and Helius API key.
+Before running the development server, you need to configure your RPC endpoint and potentially WS key.
 
-1. Open the `.env` file in the root directory of the project.
-2. Add your RPC endpoint and Helius API key:
+1. Open the `globalState.js` file in the redux folder of the project.
+2. Add your RPC endpoint and Helius WS key:
 
-    ```env
-    NEXT_PUBLIC_RPC_ENDPOINT=https://your-rpc-endpoint
-    NEXT_PUBLIC_HELIUS_API_KEY=your-helius-api-key
+    ```
+    HELIUS_KEY = "YOUR_HELIUS_KEY_HERE";
+    RPC_ENDPOINT = "YOUR_RPC_ENDPOINT_HERE"; 
     ```
 
 If you do not use Helius, modify the `HELIUS_WS_URL` variable in `utils/useMarket.ts`
@@ -52,38 +44,17 @@ Start the development server:
 ```bash
 npm run dev
 # or
-yarn dev
-# or
-pnpm dev
-# or
 bun dev
 ```
 
-#### Creating Markets
+### Features
 
-To create a new market in the Openbook V2 Demo UI, follow these steps:
+The UI currently offers the following features:
 
-1. Navigate to the "Create Market" section in the UI.
-2. Fill in the required details such as market name, base token, quote token, and other parameters.
-3. Click the "Create Market" button to initiate the market creation process.
+1. Create Openbook V2 markets.
+2. Set your RPC configuration within the UI.
+3. Swap & browse a vast range of tokens.
+4. Set and fully customize UI themes (coming soon)
+5. Trading (coming soon)
 
-The UI will guide you through the necessary steps, and you will receive a confirmation once the market is successfully created.
-
-#### Updating Logos and Text Settings
-
-To update logos and text settings in the Openbook V2 Demo UI:
-
-1. Navigate to the "Settings" section in the UI.
-2. Select the "Logos & Text" tab.
-3. Upload new logos and modify text settings as needed.
-4. Save your changes to apply them to the UI.
-
-#### Adjusting RPC Connections
-
-You can adjust the RPC connections directly from the Topbar:
-
-1. Locate the RPC settings in the Topbar.
-2. Enter the new RPC endpoint you want to use.
-3. Save your changes to update the RPC connection.
-
-This allows you to dynamically switch between different RPC endpoints without restarting the server.
+Submit a PR if you'd like to contribute!
