@@ -137,7 +137,7 @@ export const WalletComponent = ({}) => {
                     setPrioFee(Number(e.target.value));
                     dispatch(setPriorityFee(Number(e.target.value)));
                   }
-                }} className='w-full h-12 border border-secondary rounded-md p-2 font-bold text-sm px-4'/>
+                }} className='w-full h-12 border-secondary rounded-md p-2 font-bold text-sm px-4'/>
                 <span className="absolute right-4 top-0 h-12 flex items-center text-muted-foreground font-bold">SOL</span>
               </div>
             }

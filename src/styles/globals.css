@@ -7,7 +7,7 @@
   src: url('/fonts/TT_Commons_Pro_Mono_Medium.woff2') format('woff2');
   font-display: swap;
   /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
+  'embedded-opentype', and 'svg' */
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   src: url('/fonts/TT_Commons_Pro_Expanded_DemiBold.woff2') format('woff2');
   font-display: swap;
   /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
+  'embedded-opentype', and 'svg' */
 }
 
 @font-face {
@@ -24,7 +24,7 @@
   src: url('/fonts/TT_Commons_Pro_Normal.woff2') format('woff2');
   font-display: swap;
   /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
+  'embedded-opentype', and 'svg' */
 }
 
 @font-face {
@@ -33,7 +33,7 @@
   src: url('/fonts/TT_Commons_Pro_Medium.woff2') format('woff2');
   font-display: swap;
   /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
+  'embedded-opentype', and 'svg' */
 }
 
 @font-face {
@@ -43,7 +43,7 @@
   font-display: swap;
   letter-spacing: -0.04em;
   /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
+  'embedded-opentype', and 'svg' */
 }
 
 
@@ -95,7 +95,7 @@
     --warning-foreground: 34.03 93.7% 50.2%;
     --border: 253 19% 41%;
     --input: 256 18% 10%;
-    --ring: 224.3 76.3% 48%;
+    --ring: 269 38% 48%;
   }
 }
 
