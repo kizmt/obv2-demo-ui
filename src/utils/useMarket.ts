@@ -17,7 +17,6 @@ import { v2m } from "@/pages/trade/[...params]";
 import { useRouter } from "next/router";
 import { HELIUS_KEY } from "@/redux/globalState";
 
-
 export const HELIUS_WS_URL = 'wss://atlas-mainnet.helius-rpc.com?api-key='+HELIUS_KEY;
 
 export const UseMarket = () => { // base, quote = SYMBOL || MINT_ADDRESS
@@ -50,7 +49,7 @@ export const UseMarket = () => { // base, quote = SYMBOL || MINT_ADDRESS
   const [v2program, setv2program] = useState<any>(null);
   const [v2Client, setV2Client] = useState<any>(null);
 
-  // Load v1 & v2 whitelisted markets
+  // Load v2 whitelisted markets
   useEffect(() => {
     fetch("https://cache.prism.ag/v4/marketsv2.json").then(response => response.json()).then(data => {
       dispatch(setMarketsV2(data));

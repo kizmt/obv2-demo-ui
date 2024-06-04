@@ -125,46 +125,6 @@ export const OpenOrdersBox = ({currentMarket, openOrders, updateMarket, unsettle
       loadUnsettledBalances();
     }
   }, [page])
-  // const settleFunds = async (item) => {
-  //   if(state.dex === "openbookv2") {
-  //     let marketAddress = item.market;
-  //     let request = await fetch("https://v4.prism.ag/settle", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json"
-  //       },
-  //       body: JSON.stringify({
-  //         market: marketAddress,
-  //         pubkey: wallet.publicKey.toBase58(),
-  //         clob: state.dex === "openbookv2" ? "v2" : "v1"
-  //       })
-  //     }).then(res => res.json());
-  //     console.log("[openbook]", request);
-  //     if(request.success) {
-  //       const swapTransactionBuf = Buffer.from(request.transaction, 'base64');
-  //       let tx = Transaction.from(swapTransactionBuf);
-  //       let signedTx = await wallet.signTransaction(tx);
-  //       const rawTransaction = signedTx.serialize()
-  //       const txid = await connection.sendRawTransaction(rawTransaction, {
-  //         skipPreflight: true,
-  //       });
-  //       toast.loading(ToastMaker("Settling Funds", "This will take a few seconds", {
-  //         title: "View on Solscan",
-  //         href: "https://solscan.io/tx/"+txid,
-  //       }),{
-  //         id: 1
-  //       })
-  //       let status = await CONFIRM_TX(connection, txid);
-  //       if(status.value && !status.value.err)
-  //         toast.success(ToastMaker("Funds Settled!", null, {
-  //           title: "View on Solscan",
-  //           href: "https://solscan.io/tx/"+txid,
-  //         }),{
-  //           id: 1
-  //         })
-  //     }
-  //   }
-  // }
 
   useEffect(() => { // user trading history
     if(page === 1 && currentMarket && wallet.connected) {
@@ -297,70 +257,10 @@ export const OpenOrdersBox = ({currentMarket, openOrders, updateMarket, unsettle
             <p className="text-muted-foreground">Your open orders will show up here</p>
           </div>
         }
-        {/* <div className={styles.titles}>
-          <div className={styles.onlyCurrent} onClick={() => setShowAll(!showAll)}>
-            <p className={styles.label}>Market</p>
-            <div className={styles.checkbox}>
-              {
-                showAll &&
-                <div className={styles.check}/>
-              }
-            </div>
-            <p>Show All</p>
-          </div>
-          <p>Side</p>
-          <p>Size</p>
-          <p>Price</p>
-          <p>Amount</p>
-          <p>Options</p>
-        </div> */}
-        { 
-          // (formattedOpenOrders && formattedOpenOrders.length > 0) ?
-          // formattedOpenOrders.map((openOrder, i) => {
-          //   if(showAll || (!showAll && openOrder.market === currentMarket.address.toBase58())) {
-          //     return <div className={styles.openOrderRow} key={i}>
-          //       <div className={styles.market}>
-          //         <img className="borderCircle" src={openOrder.baseToken.logoURI} alt={openOrder.baseToken.symbol} width={24} height={24}/>
-          //         <img className={`borderCircle ${styles.last}`} src={openOrder.quoteToken.logoURI} alt={openOrder.quoteToken.symbol} width={24} height={24}/>
-          //         <div className={styles.marketInformation}>
-          //           <p className={styles.marketName} onClick={() => updateMarket(openOrder.market)}>{openOrder.baseToken.symbol}-{openOrder.quoteToken.symbol}</p>
-          //           <a target="_blank" href={"https://solscan.io/account/"+openOrder.market} className={styles.secondaryButton}>
-          //             <p>{openOrder.market.slice(0,6)+"..."}</p>
-          //             <ArrowTopRightIcon width={10} height={10}/>
-          //             </a>
-          //         </div>
-          //       </div>
-          //       <p className={`${styles.side} ${openOrder.side === "buy" ? styles.green : styles.red}`}>{openOrder.side.toUpperCase()}</p>
-          //       <p className={styles.size}>{formatNumber(openOrder.size,"auto")} {openOrder.baseToken.symbol}</p>
-          //       <p className={styles.price}>{formatNumber(openOrder.price,"auto")} {openOrder.quoteToken.symbol}</p>
-          //       <p className={`${styles.size} ${styles.secondary}`}>{formatNumber(openOrder.size * openOrder.price, "auto")} {openOrder.quoteToken.symbol}</p>
-          //       <div className={styles.lastChild}>
-          //         <div 
-          //           className={styles.button}
-          //           onClick={() => cancelOrder(openOrder)}>
-          //             Cancel
-          //           </div>
-          //       </div>
-          //     </div>
-          //   } else if(!showAll && formattedOpenOrders.length > 0 && i === formattedOpenOrders.length - 1) {
-          //     return <div className={styles.empty} key={i}>
-          //       <p>You have no open orders for this market</p>
-          //     </div>
-          //   }
-          // })
-          // :
-          // <div className={styles.empty}>
-          //   <p>Your open orders will show up here</p>
-          // </div>
-        }
       </div>
     }
 
     { // user trading history
-    //<p>Time</p>
-      //     <p>Side</p>
-      //     <p>Size</p>
-      //     <p>At Price</p>
       page === 1 &&
       <div className="border rounded-md rounded-tl-none overflow-x-scroll">
         <Table className="w-full">
@@ -461,46 +361,5 @@ export const OpenOrdersBox = ({currentMarket, openOrders, updateMarket, unsettle
         }
       </div>
     }
-    {/* {
-      page === 2 &&
-      <div className={styles.openOrdersTable}>
-        <div className={`${styles.titles} ${styles.unsettled}`}>
-          <p>Market</p>
-          <p>Unclaimed Base</p>
-          <p>Unclaimed Quote</p>
-          <p className={styles.last}>Options</p>
-        </div>
-        { unsettled ?
-          unsettled.map((item, i) => {
-            return <div key={i} className={`${styles.openOrderRow} ${styles.unsettled}`}>
-              <div className={styles.market}>
-                <img className="borderCircle" src={item.baseToken.logoURI} alt={item.baseToken.symbol} width={24} height={24}/>
-                <img className={`borderCircle ${styles.last}`} src={item.quoteToken.logoURI} alt={item.quoteToken.symbol} width={24} height={24}/>
-                <div className={styles.marketInformation}>
-                  <p className={styles.marketName} onClick={() => updateMarket(item.market)}>{item.baseToken.symbol}-{item.quoteToken.symbol}</p>
-                  <a target="_blank" href={"https://solscan.io/account/"+item.market} className={styles.secondaryButton}>
-                    <p>{item.market.slice(0,6)+"..."}</p>
-                    <ArrowTopRightIcon width={10} height={10}/>
-                    </a>
-                </div>
-              </div>
-              <div className={`${styles.size} ${item.base > 0 ? styles.white : ''}`}>{formatNumber(item.base / 10**item.baseToken.decimals, "auto")} { item.baseToken.symbol }</div>
-              <div className={`${styles.size} ${item.quote > 0 ? styles.white : ''}`}>{formatNumber(item.quote / 10**item.quoteToken.decimals, "auto")} { item.quoteToken.symbol }</div>
-              <div className={styles.lastChild}>
-                <div 
-                  className={`${styles.button} ${styles.green}`}
-                  onClick={() => settleFunds(item.market, item.openOrdersAddress)}>
-                    Claim
-                  </div>
-              </div>
-            </div>
-          })
-          :
-          <div className={styles.empty}>
-            <p>No unsettled balances</p>
-          </div>
-        }
-      </div>
-    } */}
   </div>
 }

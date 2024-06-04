@@ -36,7 +36,7 @@ export const CreateMarket = () => {
       return;
     }
     toast.loading("Creating market...", {id: 1});
-    let createMarketTx = await fetch("https://v4.prism.ag/createMarket", {
+    let createMarketTx = await fetch("https://v4..ag/createMarket", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

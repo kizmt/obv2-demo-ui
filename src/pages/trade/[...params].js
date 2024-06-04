@@ -61,7 +61,7 @@ export async function getServerSideProps(context) {
   const { params } = context.query;
 
   // Define the thumbnail URL based on the params
-  const thumbnail = params ? `https://prism-og.vercel.app/api/trade?address=${params[1]}` : null;
+  const thumbnail = params ? `https://obv2-demo-ui.vercel.app/api/trade?address=${params[1]}` : null;
 
   // Pass the thumbnail URL as a prop to the page component
   return { props: { thumbnail } };
@@ -174,32 +174,20 @@ const TradePage = ({thumbnail}) => {
       <title>
         {
           currentMarket ?
-          `${currentMarket.baseToken.symbol + '-' + currentMarket.quoteToken.symbol} | PRISM`
+          `${currentMarket.baseToken.symbol + '-' + currentMarket.quoteToken.symbol} | Openbook`
           :
           'Trade | Openbook'
         }
       </title>
-      <meta property="og:title" content={"Trade | Prism"} />
-      <meta property="og:description" content={`Prism is pioneering decentralized trading on Solana using orderbooks & innovative trading tools like DCA, Strategy Trading & More.`} />
-      <meta property="og:image" content={thumbnail ? thumbnail : "https://i.imgur.com/aevnDp8.png"} />
-      <meta name="twitter:image" content={thumbnail ? thumbnail : "https://i.imgur.com/aevnDp8.png"} />
+      <meta property="og:title" content={"Trade | Openbook"} />
+      <meta property="og:description" content={`Openbook is pioneering decentralized trading on Solana using orderbook.`} />
+      <meta property="og:image" content={thumbnail ? thumbnail : "https://i.ibb.co/XVYjN9N/OG-1.png"} />
+      <meta name="twitter:image" content={thumbnail ? thumbnail : "https://i.ibb.co/XVYjN9N/OG-1.png"} />
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
-    {/* <div className="flex w-full justify-center items-center p-2 bg-cyan-800 botder border-b border-b-cyan-500">
-      <p className="w-full text-center text-xs text-white">Openbook V2 is a new program and hasn't been stress-tested. The program is audited, but there might still be bugs/vulnerabilities. Use with caution</p>
-    </div> */}
     <Header path={"/trade"}/>
     <div className={`${styles.tradePage} mt-2`}>
       
-
-      {/* <div className="flex items-center gap-2 w-full">
-        <div className="flex items-center w-full justify-center gap-4 px-1">
-          <div className="flex flex-col gap-1 w-full">
-            <p className="text-sm font-bold text-center">New Chapter: Prism v4</p>
-            <p className="text-xs text-muted-foreground text-center">Learn more about what's new on Prism and it's products</p>
-          </div>
-        </div>
-      </div> */}
       {
         !whitelistedMarket && !currentMarket?.empty &&
         <Alert variant={"default"}>

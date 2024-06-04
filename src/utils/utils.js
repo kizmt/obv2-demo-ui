@@ -162,16 +162,6 @@ export const openbookTransaction = async (side, price, amount, market, pubkey, c
       "Content-Type": "application/json"
     },
     body: JSON.stringify(
-      // {
-      //   from: 'PRSMNsEPqhGVCH1TtWiJqPjJyh2cKrLostPZTNy1o5x',
-      //   to: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
-      //   amount: '2',
-      //   side: 'buy',
-      //   pubkey: 'J9zjCmmGBfv6wDSwmRW43vVJ6vooCftXjQYtc7uhETdr',
-      //   price: '0.014',
-      //   market: 'ArqzdSawkYQQNXUsef2Ndj6fcnNktgyzPuT1ouNZwj4E',
-      //   clob: 'v1'
-      // }
       {
       price: price,
       side: side,
