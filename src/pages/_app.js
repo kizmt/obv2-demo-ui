@@ -60,8 +60,7 @@ function Web3Wrapper({Component, pageProps}) {
         <WalletModalProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
-            enableSystem
+            defaultTheme="dark"
             disableTransitionOnChange
           >
           <App Component={Component} pageProps={pageProps} />
