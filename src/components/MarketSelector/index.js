@@ -91,7 +91,7 @@ export const MarketSelector = ({open, closePopup, onSelect}) => {
         <Input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className="h-[48px]" type="search" placeholder="Search token name, symbol or address"/>
         <div className="flex items-center gap-2">
           <Link href={"/createMarket"} className="w-full">
-            <Button className="w-full h-[42px]" variant={'outline'}>Create a Market</Button>
+            <Button className="w-full h-[42px] border-secondary" variant={'outline'}>Create a Market</Button>
           </Link>
           
         </div>
