@@ -19,6 +19,8 @@ import { GET_USER_TOKENS } from "@/utils/utils";
 import { ThemeProvider } from "@/components/theme-provider"
 import { useRouter } from "next/router";
 import { v2m } from "./trade/[...params]";
+import { Header } from "@/components/Header";
+import SideNav from "@/components/side-nav";
 
 function MyApp({ Component, pageProps }) {
   return <Provider store={store}>
@@ -63,7 +65,10 @@ function Web3Wrapper({Component, pageProps}) {
             defaultTheme="dark"
             disableTransitionOnChange
           >
+            <div className="relative flex h-screen">
+            <SideNav />
           <App Component={Component} pageProps={pageProps} />
+          </div>
           </ThemeProvider>
         </WalletModalProvider>
       </WalletProvider>
