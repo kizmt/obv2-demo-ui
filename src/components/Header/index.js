@@ -31,7 +31,6 @@ import React, { useEffect, useState } from "react";
 import { Separator } from "../ui/separator";
 import { useSelector } from "react-redux";
 import { useWallet } from "@solana/wallet-adapter-react";
-import { ThemeToggle } from "../theme-toggle";
 import { Paintbrush2Icon } from "lucide-react";
 // --
 const menuLinks = [
@@ -40,16 +39,16 @@ const menuLinks = [
     path: '/swap', 
     label:"Swap", 
     target:"_self",
-    icon: <SwapIcon width={20} height={20}/>, 
+    icon: <SwapIcon color="white" width={20} height={20}/>, 
     selectedColor: "#ffffff",
     description:"Best Prices"
   },
   {
     href:"/createMarket", 
-    path:'/createMarket', 
+    path:'/tools', 
     label:"Create Market", 
     target:"_self",
-    icon: <RocketIcon width={20} height={20}/>, 
+    icon: <RocketIcon color="white" width={20} height={20}/>, 
     selectedColor: "#ffffff",
     description:"Openbook V2"
   },
@@ -58,7 +57,7 @@ const menuLinks = [
     path: '/themes', 
     label:"Themes", 
     target:"_self",
-    icon: <Paintbrush2Icon width={20} height={20}/>, 
+    icon: <Paintbrush2Icon color="white" width={20} height={20}/>, 
     selectedColor: "#ffffff",
     description:"Customize UI"
   },
@@ -67,7 +66,7 @@ const menuLinks = [
     path: '/trade', 
     label:"Trade", 
     target:"_self",
-    icon: <CandlesIcon width={20} height={20}/>, 
+    icon: <CandlesIcon color="white" width={20} height={20}/>, 
     selectedColor: "#ffffff",
     description:"Set your Price"
   }
@@ -94,7 +93,7 @@ export const Header = ({path}) => {
               key={i}
               className="flex items-center">
                 <div className={`flex items-center shrink-0 ${path.indexOf(item.path) !== -1 ? 'text-[#ffffff] opacity-100' : 'opacity-90 text-muted-foreground hover:opacity-100 hover:text-white'} transition-all gap-3 w-34`}>
-                  <p className={`text-lg w-11 h-11 flex items-center justify-center rounded-sm bg-secondary`}>{item.icon}</p>
+                  <p className={`text-lg w-11 h-11 flex items-center justify-center rounded-sm bg-accent`}>{item.icon}</p>
                   <div className="flex flex-col items-start">
                     <p className="text-sm font-bold">{item.label}</p>
                     <p className="text-xs text-muted-foreground">{item.description}</p>

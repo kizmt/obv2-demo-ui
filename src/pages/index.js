@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { v1m, v2m } from "./trade/[...params]";
 import { Header } from "@/components/Header";
 import { SwapComponent } from "@/components/swap-component";
+import { Footer } from "@/components/Footer";
 
 
 const Root = () => {
